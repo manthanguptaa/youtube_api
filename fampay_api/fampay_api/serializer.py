@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from fampay.fampay.models import Youtube
+
+from app.models import Youtube
 
 
 class YoutubeSerializer(serializers.ModelSerializer):
