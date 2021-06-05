@@ -11,7 +11,7 @@ params_for_api = {
     'part': 'snippet',
     'maxResults': 50,
     'order': 'date',
-    'search_query': 'cricket',
+    'search_query': 'music',
     'api_key': ''
 }
 
