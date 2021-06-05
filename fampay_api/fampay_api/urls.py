@@ -20,5 +20,6 @@ from fampay_api import services
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get/', services.get_videos)
+    path('get/', services.get_videos),
+    path('search/', services.search_videos)
 ]
