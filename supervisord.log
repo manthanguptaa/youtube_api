@@ -1,0 +1,138 @@
+2021-06-05 18:04:01,403 INFO supervisord started with pid 7692
+2021-06-05 18:04:02,407 INFO spawned: 'worker_script' with pid 7695
+2021-06-05 18:04:03,409 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:04:12,585 WARN received SIGINT indicating exit request
+2021-06-05 18:04:12,585 INFO waiting for worker_script to die
+2021-06-05 18:04:12,591 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:05:38,727 INFO daemonizing the supervisord process
+2021-06-05 18:05:38,727 INFO supervisord started with pid 7753
+2021-06-05 18:05:39,733 INFO spawned: 'worker_script' with pid 7754
+2021-06-05 18:05:40,736 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:08:09,319 INFO supervisord started with pid 7858
+2021-06-05 18:08:10,322 INFO spawned: 'worker_script' with pid 7861
+2021-06-05 18:08:11,324 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:09:46,423 WARN received SIGINT indicating exit request
+2021-06-05 18:09:46,424 INFO waiting for worker_script to die
+2021-06-05 18:09:46,429 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:09:49,023 INFO supervisord started with pid 7937
+2021-06-05 18:09:50,027 INFO spawned: 'worker_script' with pid 7940
+2021-06-05 18:09:51,246 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:09:51,520 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:09:52,524 INFO spawned: 'worker_script' with pid 7942
+2021-06-05 18:09:52,762 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:09:53,766 INFO spawned: 'worker_script' with pid 7946
+2021-06-05 18:09:54,030 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:09:56,036 INFO spawned: 'worker_script' with pid 7947
+2021-06-05 18:09:56,351 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:09:59,360 INFO spawned: 'worker_script' with pid 7948
+2021-06-05 18:09:59,646 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:10:00,648 INFO gave up: worker_script entered FATAL state, too many start retries too quickly
+2021-06-05 18:10:00,991 WARN received SIGINT indicating exit request
+2021-06-05 18:10:19,309 INFO supervisord started with pid 7953
+2021-06-05 18:10:20,315 INFO spawned: 'worker_script' with pid 7958
+2021-06-05 18:10:21,319 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:10:59,193 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:00,139 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:00,195 INFO spawned: 'worker_script' with pid 7978
+2021-06-05 18:11:00,667 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:01,144 INFO spawned: 'worker_script' with pid 7979
+2021-06-05 18:11:01,671 INFO spawned: 'worker_script' with pid 7980
+2021-06-05 18:11:01,858 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:02,268 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:02,861 INFO spawned: 'worker_script' with pid 7981
+2021-06-05 18:11:03,389 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:04,274 INFO spawned: 'worker_script' with pid 7982
+2021-06-05 18:11:04,784 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:05,399 INFO spawned: 'worker_script' with pid 7986
+2021-06-05 18:11:05,891 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:07,789 INFO spawned: 'worker_script' with pid 7988
+2021-06-05 18:11:08,358 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:11:08,899 INFO spawned: 'worker_script' with pid 7989
+2021-06-05 18:11:08,911 WARN received SIGINT indicating exit request
+2021-06-05 18:11:08,911 INFO waiting for worker_script to die
+2021-06-05 18:11:08,914 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:11:09,359 INFO gave up: worker_script entered FATAL state, too many start retries too quickly
+2021-06-05 18:12:51,034 INFO supervisord started with pid 8079
+2021-06-05 18:12:52,038 INFO spawned: 'worker_script' with pid 8083
+2021-06-05 18:12:52,569 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:12:53,575 INFO spawned: 'worker_script' with pid 8084
+2021-06-05 18:12:54,138 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:12:56,143 INFO spawned: 'worker_script' with pid 8085
+2021-06-05 18:12:56,704 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:12:56,821 WARN received SIGINT indicating exit request
+2021-06-05 18:13:21,573 INFO supervisord started with pid 8131
+2021-06-05 18:13:22,576 INFO spawned: 'worker_script' with pid 8134
+2021-06-05 18:13:23,109 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:13:24,113 INFO spawned: 'worker_script' with pid 8138
+2021-06-05 18:13:24,597 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:13:25,183 WARN received SIGINT indicating exit request
+2021-06-05 18:17:43,566 WARN received SIGTERM indicating exit request
+2021-06-05 18:17:56,098 INFO supervisord started with pid 8340
+2021-06-05 18:17:57,101 INFO spawned: 'worker_script' with pid 8343
+2021-06-05 18:17:57,939 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:17:58,944 INFO spawned: 'worker_script' with pid 8344
+2021-06-05 18:17:59,422 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:17:59,738 WARN received SIGINT indicating exit request
+2021-06-05 18:19:43,100 INFO supervisord started with pid 8449
+2021-06-05 18:19:44,103 INFO spawned: 'worker_script' with pid 8452
+2021-06-05 18:19:45,105 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:19:45,709 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:19:46,714 INFO spawned: 'worker_script' with pid 8453
+2021-06-05 18:19:46,981 WARN received SIGINT indicating exit request
+2021-06-05 18:19:46,982 INFO waiting for worker_script to die
+2021-06-05 18:19:46,989 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:20:19,042 INFO supervisord started with pid 8462
+2021-06-05 18:20:20,044 INFO spawned: 'worker_script' with pid 8465
+2021-06-05 18:20:20,520 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:20:21,282 WARN received SIGINT indicating exit request
+2021-06-05 18:21:05,775 INFO supervisord started with pid 8477
+2021-06-05 18:21:06,779 INFO spawned: 'worker_script' with pid 8480
+2021-06-05 18:21:07,300 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:21:08,305 INFO spawned: 'worker_script' with pid 8481
+2021-06-05 18:21:08,476 WARN received SIGINT indicating exit request
+2021-06-05 18:21:08,476 INFO waiting for worker_script to die
+2021-06-05 18:21:08,477 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:21:27,914 INFO supervisord started with pid 8485
+2021-06-05 18:21:28,918 INFO spawned: 'worker_script' with pid 8488
+2021-06-05 18:21:29,467 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:21:29,927 WARN received SIGINT indicating exit request
+2021-06-05 18:21:43,924 INFO supervisord started with pid 8494
+2021-06-05 18:21:44,927 INFO spawned: 'worker_script' with pid 8497
+2021-06-05 18:21:45,431 INFO exited: worker_script (exit status 1; not expected)
+2021-06-05 18:21:46,069 WARN received SIGINT indicating exit request
+2021-06-05 18:33:23,157 INFO supervisord started with pid 9112
+2021-06-05 18:33:24,161 INFO spawned: 'worker_script' with pid 9115
+2021-06-05 18:33:25,163 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:34:57,017 WARN received SIGINT indicating exit request
+2021-06-05 18:34:57,017 INFO waiting for worker_script to die
+2021-06-05 18:34:57,022 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:36:15,739 INFO supervisord started with pid 9183
+2021-06-05 18:36:16,745 INFO spawned: 'worker_script' with pid 9186
+2021-06-05 18:36:17,747 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:38:24,989 WARN received SIGINT indicating exit request
+2021-06-05 18:38:24,990 INFO waiting for worker_script to die
+2021-06-05 18:38:24,998 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:40:42,743 INFO supervisord started with pid 9356
+2021-06-05 18:40:43,746 INFO spawned: 'worker_script' with pid 9359
+2021-06-05 18:40:44,750 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:41:31,959 WARN received SIGINT indicating exit request
+2021-06-05 18:41:31,959 INFO waiting for worker_script to die
+2021-06-05 18:41:31,963 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:42:47,296 INFO daemonizing the supervisord process
+2021-06-05 18:42:47,296 INFO supervisord started with pid 9449
+2021-06-05 18:42:48,301 INFO spawned: 'worker_script' with pid 9450
+2021-06-05 18:42:49,303 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:44:21,371 WARN received SIGTERM indicating exit request
+2021-06-05 18:44:21,371 INFO waiting for worker_script to die
+2021-06-05 18:44:21,373 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:44:48,046 INFO daemonizing the supervisord process
+2021-06-05 18:44:48,046 INFO supervisord started with pid 9553
+2021-06-05 18:44:49,051 INFO spawned: 'worker_script' with pid 9554
+2021-06-05 18:44:50,053 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-06-05 18:45:53,158 WARN received SIGTERM indicating exit request
+2021-06-05 18:45:53,160 INFO waiting for worker_script to die
+2021-06-05 18:45:53,174 INFO stopped: worker_script (terminated by SIGTERM)
+2021-06-05 18:46:16,312 INFO daemonizing the supervisord process
+2021-06-05 18:46:16,313 INFO supervisord started with pid 9602
+2021-06-05 18:46:17,316 INFO spawned: 'worker_script' with pid 9603
+2021-06-05 18:46:18,317 INFO success: worker_script entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

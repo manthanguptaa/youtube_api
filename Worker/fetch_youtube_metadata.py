@@ -3,8 +3,8 @@ from datetime import datetime, timezone, timedelta
 import os
 import json
 import sqlite3
-
-con = sqlite3.connect('../fampay_api/db.sqlite3')
+print("current dir ", os.getcwd())
+con = sqlite3.connect('fampay_api/db.sqlite3')
 cur = con.cursor()
 
 params_for_api = {
@@ -16,8 +16,8 @@ params_for_api = {
 }
 
 
-def get_video_metadata():
-    published_after = get_past_five_minutes_timestamp()
+def get_video_metadata(sec):
+    published_after = get_past_thirty_seconds_timestamp(sec)
     url = f"https://youtube.googleapis.com/youtube/v3/search?" \
           f"part={params_for_api['part']}&" \
           f"maxResults={params_for_api['maxResults']}&" \
@@ -25,7 +25,7 @@ def get_video_metadata():
           f"publishedAfter={published_after}&" \
           f"q={params_for_api['search_query']}&" \
           f"key={get_api_key()}"
-    print(url)
+
     response = requests.get(url=url)
     response_json = response.json()['items']
 
@@ -41,6 +41,8 @@ def get_video_metadata():
                 published_at = response_json[item]['snippet']['publishedAt']
                 thumbnail_url = response_json[item]['snippet']['thumbnails']['default']['url']
 
+                #Removing all the special characters from title and description 
+
                 title_description = title + " " + description
                 title_description_without_special_chars = ""
                 split_words = []
@@ -52,6 +54,8 @@ def get_video_metadata():
                         title_description_without_special_chars = ""
                 split_words.append(title_description_without_special_chars)
                 title_description_without_special_chars = " ".join(split_words)
+                
+                # pushing the response into an array for batch write
                 video_metadata.append((video_id, title, description, published_at, thumbnail_url, title_description_without_special_chars))
 
         try:
@@ -71,10 +75,7 @@ def get_api_key():
     return params_for_api['api_key']
 
 
-def get_past_five_minutes_timestamp():
-    utc_past_hour = datetime.utcnow() + timedelta(minutes=-5)
+def get_past_thirty_seconds_timestamp(sec):
+    utc_past_hour = datetime.utcnow() + timedelta(seconds=-sec)
     my_time = str(utc_past_hour.replace(tzinfo=timezone.utc)).split(' ')
     return f"{my_time[0]}T{my_time[1][:-6]}Z"
-
-
-get_video_metadata()
