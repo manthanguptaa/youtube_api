@@ -12,15 +12,17 @@ params_for_api = {
     'maxResults': 50,
     'order': 'date',
     'search_query': 'cricket',
-    'api_key': 'AIzaSyBk8XcZpmQ61hmVvqK9AIHy3ImfYPC4V3I'
+    'api_key': ''
 }
 
 
 def get_video_metadata():
+    published_after = get_past_five_minutes_timestamp()
     url = f"https://youtube.googleapis.com/youtube/v3/search?" \
           f"part={params_for_api['part']}&" \
           f"maxResults={params_for_api['maxResults']}&" \
           f"order={params_for_api['order']}&" \
+          f"publishedAfter={published_after}&" \
           f"q={params_for_api['search_query']}&" \
           f"key={get_api_key()}"
     print(url)
@@ -29,25 +31,50 @@ def get_video_metadata():
 
     if response.status_code == 200:
         # If successfully able to fetch the response then push the data to DB
+        video_metadata = []
         for item in range(len(response_json)):
-            try:
+            # If 'videoId' key is present in response_json then get all the required fields and store in an array
+            if 'videoId' in response_json[item]['id']:
                 video_id = response_json[item]['id']['videoId']
-                title = response_json[item]['snippet']['title']
-                description = response_json[item]['snippet']['description']
+                title = response_json[item]['snippet']['title'].lower()
+                description = response_json[item]['snippet']['description'].lower()
                 published_at = response_json[item]['snippet']['publishedAt']
                 thumbnail_url = response_json[item]['snippet']['thumbnails']['default']['url']
-                cur.execute(
-                    '''INSERT INTO app_youtube (video_id,title,description,published_at,thumbnail_url) VALUES (?,?,?,?,?)''',
-                    (video_id, title, description, published_at, thumbnail_url,))
-                con.commit()
-            except sqlite3.IntegrityError:
-                pass
-            except Exception as e:
-                print(e)
+
+                title_description = title + " " + description
+                title_description_without_special_chars = ""
+                split_words = []
+                for character in title_description:
+                    if character.isalnum():
+                        title_description_without_special_chars += character
+                    elif character == " " and title_description_without_special_chars != "":
+                        split_words.append(title_description_without_special_chars)
+                        title_description_without_special_chars = ""
+                split_words.append(title_description_without_special_chars)
+                title_description_without_special_chars = " ".join(split_words)
+                video_metadata.append((video_id, title, description, published_at, thumbnail_url, title_description_without_special_chars))
+
+        try:
+            # batch write all the data to the SQL DB in one go which makes it cheaper and faster
+            cur.executemany(
+                '''INSERT INTO app_youtube (video_id,title,description,published_at,thumbnail_url,title_description) 
+                VALUES (?,?,?, ?,?,?)''',
+                video_metadata)
+            con.commit()
+        except sqlite3.IntegrityError:
+            pass
+        except Exception as e:
+            print(e)
 
 
 def get_api_key():
     return params_for_api['api_key']
+
+
+def get_past_five_minutes_timestamp():
+    utc_past_hour = datetime.utcnow() + timedelta(minutes=-5)
+    my_time = str(utc_past_hour.replace(tzinfo=timezone.utc)).split(' ')
+    return f"{my_time[0]}T{my_time[1][:-6]}Z"
 
 
 get_video_metadata()
