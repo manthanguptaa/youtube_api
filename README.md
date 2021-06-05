@@ -10,14 +10,14 @@
 
 ## API Endpoints
 
-1. GET API which returns the stored video data in a paginated response sorted in descending order of published datetime
-    Access this endpoint by typing http://127.0.0.1:8000/get/?page=1
-    Demo Output
+1. GET API which returns the stored video data in a paginated response sorted in descending order of published datetime <br/>
+    Access this endpoint by typing http://127.0.0.1:8000/get/?page=1 <br/>
+    Demo Output<br/>
     ![Screenshot from 2021-06-05 20-38-49](https://user-images.githubusercontent.com/42516515/120896207-2969be80-c63e-11eb-96c1-174686bc5bb6.png)
 
-2. A basic search API to search the stored videos using their title and description (Optimised)
-    Access this endpoint by typing http://127.0.0.1:8000/search/?query=india&page=1
-    If you want to try different search queries then replace it with india. For more than 1 word concatenate them with '%20'. 
+2. A basic search API to search the stored videos using their title and description (**Optimised**) <br />
+    Access this endpoint by typing http://127.0.0.1:8000/search/?query=india&page=1 <br />
+    If you want to try different search queries then replace it with india. For more than 1 word concatenate them with '%20'. <br />
     Eg. Search Query = New Zealand then the endpoint will look like this http://127.0.0.1:8000/search/?query=new%20zealand&page=1
     Demo Output
     ![Screenshot from 2021-06-05 20-43-22](https://user-images.githubusercontent.com/42516515/120896343-b6147c80-c63e-11eb-9ca4-f069d50767fd.png)
