@@ -59,5 +59,3 @@ def search_videos(request):
         print(e)
         return JsonResponse({"result": "failed", "error": e})
 
-
-

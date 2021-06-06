@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime, timezone, timedelta
-import os
 import json
 import sqlite3
 

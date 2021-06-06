@@ -1,6 +1,5 @@
 from fetch_youtube_metadata import get_video_metadata
 import time
-import requests
 
 period = 300
 
