@@ -26,7 +26,7 @@ def get_videos(request):
         return JsonResponse({"result": serialized_results.data, "total_page": paginator.num_pages})
     except Exception as e:
         print(e)
-        return JsonResponse({"success": "failed", "result": e})
+        return JsonResponse({"result": "failed", "error": e})
 
 
 def search_videos(request):
@@ -57,7 +57,7 @@ def search_videos(request):
         return JsonResponse({"result": formatted_result})
     except Exception as e:
         print(e)
-        return JsonResponse({"success": "failed", "result": e})
+        return JsonResponse({"result": "failed", "error": e})
 
 
 
