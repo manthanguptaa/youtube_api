@@ -76,6 +76,6 @@ def get_api_key():
 
 
 def get_past_five_minute_timestamp(value):
-    utc_past_hour = datetime.utcnow() + timedelta(minutes=-value)
+    utc_past_hour = datetime.utcnow() + timedelta(seconds=-value)
     my_time = str(utc_past_hour.replace(tzinfo=timezone.utc)).split(' ')
     return f"{my_time[0]}T{my_time[1][:-6]}Z"
